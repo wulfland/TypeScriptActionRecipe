@@ -1,6 +1,6 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'TypeScript Action Recipe'
+description: 'Greet someone'
+author: 'Michael kaufmann'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:

@@ -2767,6 +2767,21 @@ async function run() {
         core.debug(new Date().toTimeString());
         await (0, wait_1.wait)(parseInt(ms, 10));
         core.debug(new Date().toTimeString());
+        // Write an advanced job summary
+        core.summary
+            .addHeading('Advanced Job Summary')
+            .addImage('https://octodex.github.com/images/yaktocat.png', 'The Yaktocat')
+            .addTable([
+            [
+                { data: 'File', header: true },
+                { data: 'Result', header: true }
+            ],
+            ['foo.js', 'Pass ✅'],
+            ['bar.js', 'Fail ❌'],
+            ['test.js', 'Pass ✅']
+        ])
+            .addLink('Link text', 'https://writeabout.net')
+            .write();
         // Set outputs for other workflow steps to use
         core.setOutput('time', new Date().toTimeString());
     }

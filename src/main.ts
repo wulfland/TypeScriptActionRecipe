@@ -22,7 +22,11 @@ export async function run(): Promise<void> {
       .addHeading('Advanced Job Summary')
       .addImage(
         'https://octodex.github.com/images/yaktocat.png',
-        'The Yaktocat'
+        'The Yaktocat',
+        {
+          width: '32',
+          height: '32'
+        }
       )
       .addTable([
         [

@@ -19,7 +19,7 @@ export async function run(): Promise<void> {
 
     // Write an advanced job summary
     core.summary
-      .addHeading('Advanced Job Summary')
+      .addHeading('Advanced Job Summary', 'h2')
       .addImage(
         'https://octodex.github.com/images/yaktocat.png',
         'The Yaktocat',
@@ -37,7 +37,7 @@ export async function run(): Promise<void> {
         ['bar.js', 'Fail ❌'],
         ['test.js', 'Pass ✅']
       ])
-      .addLink('Link text', 'https://writeabout.net')
+      .addLink('My custom link', 'https://writeabout.net')
       .write()
 
     // Set outputs for other workflow steps to use

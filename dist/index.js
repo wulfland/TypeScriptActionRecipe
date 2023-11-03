@@ -2769,7 +2769,7 @@ async function run() {
         core.debug(new Date().toTimeString());
         // Write an advanced job summary
         core.summary
-            .addHeading('Advanced Job Summary')
+            .addHeading('Advanced Job Summary', 'h2')
             .addImage('https://octodex.github.com/images/yaktocat.png', 'The Yaktocat', {
             width: '32',
             height: '32'
@@ -2783,7 +2783,7 @@ async function run() {
             ['bar.js', 'Fail ❌'],
             ['test.js', 'Pass ✅']
         ])
-            .addLink('Link text', 'https://writeabout.net')
+            .addLink('My custom link', 'https://writeabout.net')
             .write();
         // Set outputs for other workflow steps to use
         core.setOutput('time', new Date().toTimeString());

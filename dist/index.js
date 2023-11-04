@@ -2790,13 +2790,6 @@ async function run() {
     }
     catch (error) {
         // Fail the workflow run if an error occurs
-        core.error('Something bad happened', {
-            title: 'Bad Error',
-            file: '.github/workflows/ci.yml',
-            startLine: 59,
-            startColumn: 11,
-            endColumn: 23
-        });
         if (error instanceof Error)
             core.setFailed(error.message);
     }

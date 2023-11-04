@@ -1,6 +1,6 @@
 name: 'TypeScript Action Recipe'
-description: 'Greet someone'
-author: 'Michael kaufmann'
+description: 'Waites for some milliseconds, writes an awesome job summary to the workflow output and returns the current date and time.'
+author: 'Michael Kaufmann'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:

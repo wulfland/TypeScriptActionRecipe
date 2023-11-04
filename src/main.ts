@@ -28,7 +28,7 @@ export async function run(): Promise<void> {
         'Droidtocat',
         {
           width: '64',
-          height: ''
+          height: '64'
         }
       )
       .addTable([

@@ -2774,7 +2774,7 @@ async function run() {
             .addHeading('Advanced Job Summary', 'h2')
             .addImage('https://octodex.github.com/images/droidtocat.png', 'Droidtocat', {
             width: '64',
-            height: ''
+            height: '64'
         })
             .addTable([
             [

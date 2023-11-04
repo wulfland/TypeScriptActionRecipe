@@ -180,6 +180,28 @@ describe('action', () => {
       ['test.js', 'Pass ✅']
     ])
     expect(errorMock).not.toHaveBeenCalled()
+  })
+  it('adds a link', async () => {
+    // Set the action's inputs as return values from core.getInput()
+    getInputMock.mockImplementation((name: string): string => {
+      switch (name) {
+        case 'milliseconds':
+          return '500'
+        default:
+          return ''
+      }
+    })
+
+    await main.run()
+    expect(runMock).toHaveReturned()
+
+    // Verify that all of the core library functions were called correctly
+    expect(addLinkMock).toHaveBeenNthCalledWith(
+      1,
+      'My custom link',
+      'https://writeabout.net'
+    )
+    expect(errorMock).not.toHaveBeenCalled()
     expect(writeMock).toHaveBeenCalled()
   })
 })

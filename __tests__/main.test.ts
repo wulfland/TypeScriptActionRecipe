@@ -1,4 +1,4 @@
-lstat /**
+/**
  * Unit tests for the action's main functionality, src/main.ts
  *
  * These should be run as if the action was called from a workflow.
@@ -8,7 +8,6 @@ lstat /**
 
 import * as core from '@actions/core'
 import * as main from '../src/main'
-import { lstat } from 'fs'
 
 // Mock the action's main function
 const runMock = jest.spyOn(main, 'run')
@@ -181,5 +180,6 @@ describe('action', () => {
       ['test.js', 'Pass ✅']
     ])
     expect(errorMock).not.toHaveBeenCalled()
+    expect(writeMock).toHaveBeenCalled()
   })
 })

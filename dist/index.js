@@ -2767,6 +2767,8 @@ async function run() {
         core.debug(new Date().toTimeString());
         await (0, wait_1.wait)(parseInt(ms, 10));
         core.debug(new Date().toTimeString());
+        // Set outputs for other workflow steps to use
+        core.setOutput('time', new Date().toTimeString());
         // Write an advanced job summary
         core.summary
             .addHeading('Advanced Job Summary', 'h2')
@@ -2785,8 +2787,6 @@ async function run() {
         ])
             .addLink('My custom link', 'https://writeabout.net')
             .write();
-        // Set outputs for other workflow steps to use
-        core.setOutput('time', new Date().toTimeString());
     }
     catch (error) {
         // Fail the workflow run if an error occurs

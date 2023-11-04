@@ -17,6 +17,9 @@ export async function run(): Promise<void> {
     await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
 
+    // Set outputs for other workflow steps to use
+    core.setOutput('time', new Date().toTimeString())
+
     // Write an advanced job summary
     core.summary
       .addHeading('Advanced Job Summary', 'h2')
@@ -39,9 +42,6 @@ export async function run(): Promise<void> {
       ])
       .addLink('My custom link', 'https://writeabout.net')
       .write()
-
-    // Set outputs for other workflow steps to use
-    core.setOutput('time', new Date().toTimeString())
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)

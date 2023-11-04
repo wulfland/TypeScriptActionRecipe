@@ -145,11 +145,11 @@ describe('action', () => {
     // Verify that all of the core library functions were called correctly
     expect(addImageMock).toHaveBeenNthCalledWith(
       1,
-      'https://octodex.github.com/images/yaktocat.png',
-      'The Yaktocat',
+      'https://octodex.github.com/images/droidtocat.png',
+      'Droidtocat',
       {
-        width: '32',
-        height: '32'
+        width: '64',
+        height: '64'
       }
     )
     expect(errorMock).not.toHaveBeenCalled()
@@ -181,6 +181,7 @@ describe('action', () => {
     ])
     expect(errorMock).not.toHaveBeenCalled()
   })
+
   it('adds a link', async () => {
     // Set the action's inputs as return values from core.getInput()
     getInputMock.mockImplementation((name: string): string => {

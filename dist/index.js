@@ -2772,9 +2772,9 @@ async function run() {
         // Write an advanced job summary
         core.summary
             .addHeading('Advanced Job Summary', 'h2')
-            .addImage('https://octodex.github.com/images/yaktocat.png', 'The Yaktocat', {
-            width: '32',
-            height: '32'
+            .addImage('https://octodex.github.com/images/droidtocat.png', 'Droidtocat', {
+            width: '64',
+            height: '64'
         })
             .addTable([
             [

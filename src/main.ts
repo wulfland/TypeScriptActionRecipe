@@ -24,11 +24,11 @@ export async function run(): Promise<void> {
     core.summary
       .addHeading('Advanced Job Summary', 'h2')
       .addImage(
-        'https://octodex.github.com/images/yaktocat.png',
-        'The Yaktocat',
+        'https://octodex.github.com/images/droidtocat.png',
+        'Droidtocat',
         {
-          width: '32',
-          height: '32'
+          width: '64',
+          height: '64'
         }
       )
       .addTable([
